@@ -2,6 +2,21 @@
 
 const fizzBuzz = function (n) {
   //Start coding here
+  let result = [];
+  for (let i = 1; i <= n; i++) {
+    let text;
+    if (i % 5 === 0 && i % 3 === 0) {
+      text = "FizzBuzz";
+    } else if (i % 3 === 0) {
+      text = "Fizz";
+    } else if (i % 5 === 0) {
+      text = "Buzz";
+    } else {
+      text = i.toString();
+    }
+    result.push(text);
+  }
+  return result;
 };
 
 const result1 = fizzBuzz(3);
